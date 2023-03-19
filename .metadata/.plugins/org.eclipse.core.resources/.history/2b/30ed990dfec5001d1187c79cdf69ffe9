@@ -1,0 +1,96 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="/css/main.css"/>
+<title>Cyber Sleuth Academy</title>
+</head>
+<body>
+	<div class="container">
+		<div class="top-header">
+			<div>
+				<h1 class="big-header">Cyber Sleuth Academy</h1>
+				<h3>Learn to become a true master of Digimon competitive battling!</h3>
+			</div>
+			<div>
+				<a href="${pageContext.servletContext.contextPath}/hmcalc/">View Damage Calc</a>
+			</div>
+		</div>
+		<div class="">
+		
+		</div>
+		<div class="">
+			<h3>Digimon Database Search</h3>
+			<div>
+				<label>Stage: </label>
+				<c:forEach var="stage" items="${stages}">
+					<label><input type="checkbox" name="${stage.stageName}"><c:out value="${stage.stageName}"/></label>
+				</c:forEach>
+			</div>
+			<div>
+				<label>Type: </label>
+				<c:forEach var="type" items="${types}">
+					<label><input type="checkbox" name="${type.typeName}"><c:out value="${type.typeName}"/></label>
+				</c:forEach>
+			</div>
+			<div>
+				<label>Attribute: </label>
+				<c:forEach var="attribute" items="${attributes}">
+					<label><input type="checkbox" name="${attribute.attributeName}"><c:out value="${attribute.attributeName}"/></label>
+				</c:forEach>
+			</div>
+			<div>
+				<label>Growth Type: </label>
+				<c:forEach var="growthType" items="${growthTypes}">
+					<label><input type="checkbox" name="${growthType.growthTypeName}"><c:out value="${growthType.growthTypeName}"/></label>
+				</c:forEach>
+			</div>
+			<input type="button" value="Search">
+			<div>
+				<table class="sort-table">
+					<thead>
+						<tr>
+							<th>Number</th>
+							<th>Digimon</th>
+							<th>Growth Type</th>
+							<th>Stage</th>
+							<th>Type</th>
+							<th>Attribute</th>
+							<th>Equip Slots</th>
+							<th>HP</th>
+							<th>SP</th>
+							<th>ATK</th>
+							<th>DEF</th>
+							<th>INT</th>
+							<th>SPE</th>
+						</tr>
+					</thead>
+					<tbody>
+						<c:forEach var="digimon" items="${digimons}">
+							<tr>
+								<td><c:out value="${digimon.id}"/></td>
+								<td><c:out value="${digimon.diginame}"/></td>
+								<td><c:out value="${digimon.growthType.growthTypeName}"/></td>
+								<td><c:out value="${digimon.stage.stageName}"/></td>
+								<td><c:out value="${digimon.type.typeName}"/></td>
+								<td><c:out value="${digimon.attribute.attributeName}"/></td>
+								<td><c:out value="${digimon.items}"/></td>
+								<td><c:out value="${digimon.hp_stat}"/></td>
+								<td><c:out value="${digimon.sp_stat}"/></td>
+								<td><c:out value="${digimon.atk_stat}"/></td>
+								<td><c:out value="${digimon.def_stat}"/></td>
+								<td><c:out value="${digimon.int_stat}"/></td>
+								<td><c:out value="${digimon.spd_stat}"/></td>
+							</tr>
+						</c:forEach>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+   	 <script src="js/home-script.js"></script>
+</body>
+</html>

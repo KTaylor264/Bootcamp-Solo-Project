@@ -1,0 +1,62 @@
+@charset "ISO-8859-1";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	background-color: lightblue;
+}
+
+body {
+	min-height: 100vh;
+}
+
+.container {
+	margin: 0 4em;
+	padding: 0.5em;
+}
+
+.top-header {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10em;
+}
+
+.big-header {
+	font-size: 4em;
+}
+
+.sort-table {
+	display: block;
+	height: 22em;
+	overflow-y: scroll;
+}
+
+table, th, td {
+	text-align: center;
+	border: 2px solid black;
+	border-collapse: collapse;
+}
+
+table th {
+	padding: 6px;
+	background-color: grey;
+}
+
+table td {
+	padding: 6px;
+}
+
+table tr:nth-child(even) {
+	background-color: white;
+}
+
+table tr:nth-child(odd) {
+	background-color: lightgrey;
+}
+
+table th, table td {
+	min-width: 80px;
+}

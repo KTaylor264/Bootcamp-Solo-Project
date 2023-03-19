@@ -1,0 +1,3 @@
+INDEX VERSION 1.4+C:\Users\ktayl\Documents\Bootcamp Assignments\Java\Solo Project\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+4111358678.index
+3858457632.index

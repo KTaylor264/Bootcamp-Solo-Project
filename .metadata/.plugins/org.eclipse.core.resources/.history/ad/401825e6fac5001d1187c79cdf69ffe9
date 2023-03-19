@@ -1,0 +1,64 @@
+@charset "ISO-8859-1";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+
+}
+
+body {
+	min-height: 100vh;
+}
+
+.container {
+	margin: 0 4em;
+	padding: 0.5em;
+}
+
+.top-header {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10em;
+}
+
+.big-header {
+	font-size: 4em;
+}
+
+.sort-table {
+	display: block;
+	height: 14em;
+	overflow-y: scroll;
+	text-align: center;
+}
+
+.sort-table table, .sort-table th, .sort-table td {
+	text-align: center;
+	border: 2px solid black;
+	border-collapse: collapse;
+}
+
+.sort-table table th {
+	padding: 6px;
+	background-color: grey;
+}
+
+.sort-table table td {
+	padding: 6px;
+}
+
+.sort-table table tr:nth-child(even) {
+	background-color: white;
+}
+
+.sort-table table tr:nth-child(odd) {
+	background-color: lightgrey;
+}
+
+table, th, td {
+	min-width: 50px;
+	padding: 2px;
+}

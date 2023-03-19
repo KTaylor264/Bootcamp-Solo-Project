@@ -1,0 +1,3 @@
+INDEX VERSION 1.131
+C:\Users\ktayl\Documents\Bootcamp Assignments\Java\Solo Project\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4111358678.index
+\cyber-sleuth-academy\src\main\java

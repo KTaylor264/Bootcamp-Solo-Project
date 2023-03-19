@@ -1,0 +1,5 @@
+package com.kendelltaylor.hmcalc.controllers;
+
+public class MainController {
+
+}

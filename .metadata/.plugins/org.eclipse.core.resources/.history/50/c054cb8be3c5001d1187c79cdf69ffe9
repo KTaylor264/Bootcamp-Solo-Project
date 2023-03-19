@@ -1,0 +1,28 @@
+@charset "ISO-8859-1";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	background-color: lightblue;
+}
+
+body {
+	min-height: 100vh;
+}
+
+.container {
+	margin: 0 4em;
+	padding: 0.5em;
+}
+
+.top-header {
+	display: flex;
+	justify-content: space-between;
+}
+
+.big-header {
+	font-size: 4em;
+}
