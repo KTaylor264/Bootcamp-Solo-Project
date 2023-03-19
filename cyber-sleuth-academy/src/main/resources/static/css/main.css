@@ -29,8 +29,8 @@ body {
 }
 
 #sort-table {
-	display: block;
-	height: 22em;
+	display: inline-block;
+	max-height: 22em;
 	overflow-y: scroll;
 }
 
@@ -59,4 +59,16 @@ table tr:nth-child(odd) {
 
 table th, table td {
 	min-width: 80px;
+}
+
+.search-btn {
+	padding: 6px;
+}
+
+.div-box {
+	margin-bottom: 1em;
+}
+
+.div-last {
+		margin-bottom: 2em;
 }

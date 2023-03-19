@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.kendelltaylor.hmcalc.models.Attribute;
 import com.kendelltaylor.hmcalc.models.Digimon;
@@ -66,10 +67,376 @@ public class MainController {
 		return "index.jsp";
 	}
 	
-	@PostMapping("/update-search")
-	public String updateSearch()
+	@GetMapping("/hmcalc/")
+	public String damageCalc(Model model)
 	{
-		// need to have a way to filter digimon here...
-		return "redirect:/";
+		List<Digimon> digimons = digiServ.findAll();
+		List<GrowthType> growthTypes = growthServ.findAll();
+		List<Stage> stages = stageServ.findAll();
+		List<Type> types = typeServ.findAll();
+		List<Attribute> attributes = attribServ.findAll();
+		List<SupportSkill> supports = suppServ.findAll();
+		List<Item> items = itemServ.findAll();
+		
+		model.addAttribute("digimons", digimons);
+		model.addAttribute("growthTypes", growthTypes);
+		model.addAttribute("stages", stages);
+		model.addAttribute("types", types);
+		model.addAttribute("attributes", attributes);
+		model.addAttribute("supports", supports);
+		model.addAttribute("items", items);
+		
+		return "calc.jsp";
+	}
+	
+	@PostMapping("/")
+	public String updateSearch(Model model, @RequestParam(defaultValue="false", value="Baby") Boolean baby,
+			@RequestParam(defaultValue="false", value="In-Training") Boolean train, @RequestParam(defaultValue="false", value="Rookie") Boolean rookie,
+			@RequestParam(defaultValue="false", value="Champion") Boolean champ, @RequestParam(defaultValue="false", value="Ultimate") Boolean ult,
+			@RequestParam(defaultValue="false", value="Mega") Boolean mega, @RequestParam(defaultValue="false", value="Ultra") Boolean ultra,
+			@RequestParam(defaultValue="false", value="Armor") Boolean armor, @RequestParam(defaultValue="false", value="None") Boolean none,
+			@RequestParam(defaultValue="false", value="FREE") Boolean free, @RequestParam(defaultValue="false", value="VIRUS") Boolean virus,
+			@RequestParam(defaultValue="false", value="DATA") Boolean data, @RequestParam(defaultValue="false", value="VACCINE") Boolean vaccine,
+			@RequestParam(defaultValue="false", value="NEUTRAL") Boolean neutral, @RequestParam(defaultValue="false", value="FIRE") Boolean fire,
+			@RequestParam(defaultValue="false", value="PLANT") Boolean plant, @RequestParam(defaultValue="false", value="WATER") Boolean water,
+			@RequestParam(defaultValue="false", value="ELECTRIC") Boolean electric, @RequestParam(defaultValue="false", value="WIND") Boolean wind,
+			@RequestParam(defaultValue="false", value="EARTH") Boolean earth, @RequestParam(defaultValue="false", value="LIGHT") Boolean light,
+			@RequestParam(defaultValue="false", value="DARK") Boolean dark, @RequestParam(defaultValue="false", value="HEALTH") Boolean health,
+			@RequestParam(defaultValue="false", value="ATTACK") Boolean attack, @RequestParam(defaultValue="false", value="HASTE") Boolean haste,
+			@RequestParam(defaultValue="false", value="TANK") Boolean tank, @RequestParam(defaultValue="false", value="WALL") Boolean wall,
+			@RequestParam(defaultValue="false", value="SPIRIT") Boolean spirit, @RequestParam(defaultValue="false", value="WISDOM") Boolean wisdom,
+			@RequestParam(defaultValue="false", value="AGILITY") Boolean agility, @RequestParam(defaultValue="false", value="BALANCED") Boolean balanced,
+			@RequestParam(defaultValue="false", value="DBLBARREL") Boolean barrel, @RequestParam(defaultValue="false", value="???") Boolean unknown)
+	{
+		List<Digimon> digimons = digiServ.findAll();
+		List<GrowthType> growthTypes = growthServ.findAll();
+		List<Stage> stages = stageServ.findAll();
+		List<Type> types = typeServ.findAll();
+		List<Attribute> attributes = attribServ.findAll();
+		List<SupportSkill> supports = suppServ.findAll();
+		List<Item> items = itemServ.findAll();
+		
+		if (!baby && !train && !rookie && !champ && !ult && !mega && !ultra && !armor && !none) {
+			System.out.println("pass the whole digimon list");
+		} else {
+			if (!baby) {
+				for (int i = digimons.size() - 1; i > -1 ; i--) {
+					// baby stage
+					if (digimons.get(i).getStage() == stages.get(0)) {
+						digimons.remove(i);
+					}
+				}
+			}
+			
+			if (!train) {
+				for (int i = digimons.size() - 1; i > -1 ; i--) {
+					// baby stage
+					if (digimons.get(i).getStage() == stages.get(1)) {
+						digimons.remove(i);
+					}
+				}
+			}
+			
+			if (!rookie) {
+				for (int i = digimons.size() - 1; i > -1 ; i--) {
+					// baby stage
+					if (digimons.get(i).getStage() == stages.get(2)) {
+						digimons.remove(i);
+					}
+				}
+			}
+			
+			if (!champ) {
+				for (int i = digimons.size() - 1; i > -1 ; i--) {
+					// baby stage
+					if (digimons.get(i).getStage() == stages.get(3)) {
+						digimons.remove(i);
+					}
+				}
+			}
+			
+			if (!ult) {
+				for (int i = digimons.size() - 1; i > -1 ; i--) {
+					// baby stage
+					if (digimons.get(i).getStage() == stages.get(4)) {
+						digimons.remove(i);
+					}
+				}
+			}
+			
+			if (!mega) {
+				for (int i = digimons.size() - 1; i > -1 ; i--) {
+					// baby stage
+					if (digimons.get(i).getStage() == stages.get(5)) {
+						digimons.remove(i);
+					}
+				}
+			}
+			
+			if (!ultra) {
+				for (int i = digimons.size() - 1; i > -1 ; i--) {
+					// baby stage
+					if (digimons.get(i).getStage() == stages.get(6)) {
+						digimons.remove(i);
+					}
+				}
+			}
+			
+			if (!armor) {
+				for (int i = digimons.size() - 1; i > -1 ; i--) {
+					// baby stage
+					if (digimons.get(i).getStage() == stages.get(7)) {
+						digimons.remove(i);
+					}
+				}
+			}
+			
+			if (!none) {
+				for (int i = digimons.size() - 1; i > -1 ; i--) {
+					// baby stage
+					if (digimons.get(i).getStage() == stages.get(8)) {
+						digimons.remove(i);
+					}
+				}
+			}
+		}
+		
+		if (!free && !virus && !data && !vaccine) {
+			System.out.println("pass the whole type list");
+		} else {
+			if (!free) {
+				for (int i = digimons.size() - 1; i > -1 ; i--) {
+					// free type
+					if (digimons.get(i).getType() == types.get(0)) {
+						digimons.remove(i);
+					}
+				}
+			}
+			
+			if (!virus) {
+				for (int i = digimons.size() - 1; i > -1 ; i--) {
+					// virus type
+					if (digimons.get(i).getType() == types.get(1)) {
+						digimons.remove(i);
+					}
+				}
+			}
+			
+			if (!data) {
+				for (int i = digimons.size() - 1; i > -1 ; i--) {
+					// data type
+					if (digimons.get(i).getType() == types.get(2)) {
+						digimons.remove(i);
+					}
+				}
+			}
+			
+			if (!vaccine) {
+				for (int i = digimons.size() - 1; i > -1 ; i--) {
+					// vaccine type
+					if (digimons.get(i).getType() == types.get(3)) {
+						digimons.remove(i);
+					}
+				}
+			}
+		}
+		
+		if (!neutral && !fire && !plant && !water && !electric && !wind && !earth && !light && !dark) {
+			System.out.println("pass the whole attribute list");
+		} else {
+			if (!neutral) {
+				for (int i = digimons.size() - 1; i > -1 ; i--) {
+					// neutral attribute
+					if (digimons.get(i).getAttribute() == attributes.get(0)) {
+						digimons.remove(i);
+					}
+				}
+			}
+			
+			if (!fire) {
+				for (int i = digimons.size() - 1; i > -1 ; i--) {
+					// fire attribute
+					if (digimons.get(i).getAttribute() == attributes.get(1)) {
+						digimons.remove(i);
+					}
+				}
+			}
+			
+			if (!plant) {
+				for (int i = digimons.size() - 1; i > -1 ; i--) {
+					// plant attribute
+					if (digimons.get(i).getAttribute() == attributes.get(2)) {
+						digimons.remove(i);
+					}
+				}
+			}
+			
+			if (!water) {
+				for (int i = digimons.size() - 1; i > -1 ; i--) {
+					// water attribute
+					if (digimons.get(i).getAttribute() == attributes.get(3)) {
+						digimons.remove(i);
+					}
+				}
+			}
+			
+			if (!electric) {
+				for (int i = digimons.size() - 1; i > -1 ; i--) {
+					// electric attribute
+					if (digimons.get(i).getAttribute() == attributes.get(4)) {
+						digimons.remove(i);
+					}
+				}
+			}
+			
+			if (!wind) {
+				for (int i = digimons.size() - 1; i > -1 ; i--) {
+					// wind attribute
+					if (digimons.get(i).getAttribute() == attributes.get(5)) {
+						digimons.remove(i);
+					}
+				}
+			}
+			
+			if (!earth) {
+				for (int i = digimons.size() - 1; i > -1 ; i--) {
+					// earth attribute
+					if (digimons.get(i).getAttribute() == attributes.get(6)) {
+						digimons.remove(i);
+					}
+				}
+			}
+			
+			if (!light) {
+				for (int i = digimons.size() - 1; i > -1 ; i--) {
+					// light attribute
+					if (digimons.get(i).getAttribute() == attributes.get(7)) {
+						digimons.remove(i);
+					}
+				}
+			}
+			
+			if (!dark) {
+				for (int i = digimons.size() - 1; i > -1 ; i--) {
+					// dark attribute
+					if (digimons.get(i).getAttribute() == attributes.get(8)) {
+						digimons.remove(i);
+					}
+				}
+			}
+		}
+		
+		if (!health && !attack && !haste && !tank && !wall && !spirit && !wisdom && !agility && !balanced && !barrel && !unknown) {
+			System.out.println("pass the whole growthtype list");
+		} else {
+			if (!health) {
+				for (int i = digimons.size() - 1; i > -1 ; i--) {
+					// health growthtype
+					if (digimons.get(i).getGrowthType() == growthTypes.get(0)) {
+						digimons.remove(i);
+					}
+				}
+			}
+			
+			if (!attack) {
+				for (int i = digimons.size() - 1; i > -1 ; i--) {
+					// attack growthtype
+					if (digimons.get(i).getGrowthType() == growthTypes.get(1)) {
+						digimons.remove(i);
+					}
+				}
+			}
+			
+			if (!haste) {
+				for (int i = digimons.size() - 1; i > -1 ; i--) {
+					// haste growthtype
+					if (digimons.get(i).getGrowthType() == growthTypes.get(2)) {
+						digimons.remove(i);
+					}
+				}
+			}
+			
+			if (!tank) {
+				for (int i = digimons.size() - 1; i > -1 ; i--) {
+					// tank growthtype
+					if (digimons.get(i).getGrowthType() == growthTypes.get(3)) {
+						digimons.remove(i);
+					}
+				}
+			}
+			
+			if (!wall) {
+				for (int i = digimons.size() - 1; i > -1 ; i--) {
+					// wall growthtype
+					if (digimons.get(i).getGrowthType() == growthTypes.get(4)) {
+						digimons.remove(i);
+					}
+				}
+			}
+			
+			if (!spirit) {
+				for (int i = digimons.size() - 1; i > -1 ; i--) {
+					// spirit growthtype
+					if (digimons.get(i).getGrowthType() == growthTypes.get(5)) {
+						digimons.remove(i);
+					}
+				}
+			}
+			
+			if (!wisdom) {
+				for (int i = digimons.size() - 1; i > -1 ; i--) {
+					// wisdom growthtype
+					if (digimons.get(i).getGrowthType() == growthTypes.get(6)) {
+						digimons.remove(i);
+					}
+				}
+			}
+			
+			if (!agility) {
+				for (int i = digimons.size() - 1; i > -1 ; i--) {
+					// agility growthtype
+					if (digimons.get(i).getGrowthType() == growthTypes.get(7)) {
+						digimons.remove(i);
+					}
+				}
+			}
+			
+			if (!balanced) {
+				for (int i = digimons.size() - 1; i > -1 ; i--) {
+					// balanced growthtype
+					if (digimons.get(i).getGrowthType() == growthTypes.get(8)) {
+						digimons.remove(i);
+					}
+				}
+			}
+			
+			if (!barrel) {
+				for (int i = digimons.size() - 1; i > -1 ; i--) {
+					// dblbarrel growthtype
+					if (digimons.get(i).getGrowthType() == growthTypes.get(9)) {
+						digimons.remove(i);
+					}
+				}
+			}
+			
+			if (!unknown) {
+				for (int i = digimons.size() - 1; i > -1 ; i--) {
+					// ??? growthtype
+					if (digimons.get(i).getGrowthType() == growthTypes.get(10)) {
+						digimons.remove(i);
+					}
+				}
+			}
+		}
+		
+		model.addAttribute("digimons", digimons);
+		model.addAttribute("growthTypes", growthTypes);
+		model.addAttribute("stages", stages);
+		model.addAttribute("types", types);
+		model.addAttribute("attributes", attributes);
+		model.addAttribute("supports", supports);
+		model.addAttribute("items", items);
+		
+		return "index.jsp";
 	}
 }

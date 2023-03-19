@@ -24,35 +24,35 @@
 		</div>
 		<div class="">
 			<h3>Digimon Database Search</h3>
-			<form action="/update-search" method="post">
-				<div>
+			<form action="/" method="post">
+				<div class="div-box">
 					<label>Stage: </label>
 					<c:forEach var="stage" items="${stages}">
 						<label><input type="checkbox" name="${stage.stageName}"><c:out value="${stage.stageName}"/></label>
 					</c:forEach>
 				</div>
-				<div>
+				<div class="div-box">
 					<label>Type: </label>
 					<c:forEach var="type" items="${types}">
 						<label><input type="checkbox" name="${type.typeName}"><c:out value="${type.typeName}"/></label>
 					</c:forEach>
 				</div>
-				<div>
+				<div class="div-box">
 					<label>Attribute: </label>
 					<c:forEach var="attribute" items="${attributes}">
 						<label><input type="checkbox" name="${attribute.attributeName}"><c:out value="${attribute.attributeName}"/></label>
 					</c:forEach>
 				</div>
-				<div>
+				<div class="div-box">
 					<label>Growth Type: </label>
 					<c:forEach var="growthType" items="${growthTypes}">
 						<label><input type="checkbox" name="${growthType.growthTypeName}"><c:out value="${growthType.growthTypeName}"/></label>
 					</c:forEach>
 				</div>
-				<input name="submit" type="submit" value="Search">
+				<input class="search-btn div-last" name="submit" type="submit" value="Search">
 			</form>
 			<div>
-				<label>Click a header to sort a column</label>
+				<label>Click a header to sort a column</label><br>
 				<table id="sort-table">
 					<thead>
 						<tr>
@@ -94,6 +94,5 @@
 			</div>
 		</div>
 	</div>
-   	 <script src="js/home-script.js"></script>
 </body>
 </html>
