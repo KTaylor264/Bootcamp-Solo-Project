@@ -1,0 +1,337 @@
+function checkStages(boolStages)
+{
+	for (var i = 0; i < boolStages.length; i++)
+	{
+		switch (i)
+		{
+			case 0:
+			{
+				if (boolStages[i] == true)
+				{
+					var check = document.getElementById("Baby");
+					check.checked = true;
+				}
+				else
+				{
+					var check = document.getElementById("Baby");
+					check.checked = false;
+				}
+			}
+			break;
+			case 1:
+			{
+				if (boolStages[i] == true)
+				{
+					var check = document.getElementById("In-Training");
+					check.checked = true;
+				}
+				else
+				{
+					var check = document.getElementById("In-Training");
+					check.checked = false;
+				}
+			}
+			break;
+			case 2:
+			{
+				if (boolStages[i] == true)
+				{
+					var check = document.getElementById("Rookie");
+					check.checked = true;
+				}
+				else
+				{
+					var check = document.getElementById("Rookie");
+					check.checked = false;
+				}
+			}
+			break;
+			case 3:
+			{
+				if (boolStages[i] == true)
+				{
+					var check = document.getElementById("Champion");
+					check.checked = true;
+				}
+				else
+				{
+					var check = document.getElementById("Champion");
+					check.checked = false;
+				}
+			}
+			break;
+			case 4:
+			{
+				if (boolStages[i] == true)
+				{
+					var check = document.getElementById("Ultimate");
+					check.checked = true;
+				}
+				else
+				{
+					var check = document.getElementById("Ultimate");
+					check.checked = false;
+				}
+			}
+			break;
+			case 5:
+			{
+				if (boolStages[i] == true)
+				{
+					var check = document.getElementById("Mega");
+					check.checked = true;
+				}
+				else
+				{
+					var check = document.getElementById("Mega");
+					check.checked = false;
+				}
+			}
+			break;
+			case 6:
+			{
+				if (boolStages[i] == true)
+				{
+					var check = document.getElementById("Ultra");
+					check.checked = true;
+				}
+				else
+				{
+					var check = document.getElementById("Ultra");
+					check.checked = false;
+				}
+			}
+			break;
+			case 7:
+			{
+				if (boolStages[i] == true)
+				{
+					var check = document.getElementById("Armor");
+					check.checked = true;
+				}
+				else
+				{
+					var check = document.getElementById("Armor");
+					check.checked = false;
+				}
+			}
+			break;
+			case 8:
+			{
+				if (boolStages[i] == true)
+				{
+					var check = document.getElementById("None");
+					check.checked = true;
+				}
+				else
+				{
+					var check = document.getElementById("None");
+					check.checked = false;
+				}
+			}
+			break;
+		}
+	}
+}
+
+function checkTypes(boolTypes)
+{
+	for (var i = 0; i < boolTypes.length; i++)
+	{
+		switch (i)
+		{
+			case 0:
+			{
+				if (boolTypes[i] == true)
+				{
+					var check = document.getElementById("FREE");
+					check.checked = true;
+				}
+				else
+				{
+					var check = document.getElementById("FREE");
+					check.checked = false;
+				}
+			}
+			break;
+			case 1:
+			{
+				if (boolTypes[i] == true)
+				{
+					var check = document.getElementById("VIRUS");
+					check.checked = true;
+				}
+				else
+				{
+					var check = document.getElementById("VIRUS");
+					check.checked = false;
+				}
+			}
+			break;
+			case 2:
+			{
+				if (boolTypes[i] == true)
+				{
+					var check = document.getElementById("DATA");
+					check.checked = true;
+				}
+				else
+				{
+					var check = document.getElementById("DATA");
+					check.checked = false;
+				}
+			}
+			break;
+			case 3:
+			{
+				if (boolTypes[i] == true)
+				{
+					var check = document.getElementById("VACCINE");
+					check.checked = true;
+				}
+				else
+				{
+					var check = document.getElementById("VACCINE");
+					check.checked = false;
+				}
+			}
+			break;
+		}
+	}
+}
+
+function checkAttribs(boolAttribs)
+{
+	for (var i = 0; i < boolAttribs.length; i++)
+	{
+		switch (i)
+		{
+			case 0:
+			{
+				if (boolAttribs[i] == true)
+				{
+					var check = document.getElementById("NEUTRAL");
+					check.checked = true;
+				}
+				else
+				{
+					var check = document.getElementById("NEUTRAL");
+					check.checked = false;
+				}
+			}
+			break;
+			case 1:
+			{
+				if (boolAttribs[i] == true)
+				{
+					var check = document.getElementById("FIRE");
+					check.checked = true;
+				}
+				else
+				{
+					var check = document.getElementById("FIRE");
+					check.checked = false;
+				}
+			}
+			break;
+			case 2:
+			{
+				if (boolAttribs[i] == true)
+				{
+					var check = document.getElementById("PLANT");
+					check.checked = true;
+				}
+				else
+				{
+					var check = document.getElementById("PLANT");
+					check.checked = false;
+				}
+			}
+			break;
+			case 3:
+			{
+				if (boolAttribs[i] == true)
+				{
+					var check = document.getElementById("WATER");
+					check.checked = true;
+				}
+				else
+				{
+					var check = document.getElementById("WATER");
+					check.checked = false;
+				}
+			}
+			break;
+			case 4:
+			{
+				if (boolAttribs[i] == true)
+				{
+					var check = document.getElementById("ELECTRIC");
+					check.checked = true;
+				}
+				else
+				{
+					var check = document.getElementById("ELECTRIC");
+					check.checked = false;
+				}
+			}
+			break;
+			case 5:
+			{
+				if (boolAttribs[i] == true)
+				{
+					var check = document.getElementById("WIND");
+					check.checked = true;
+				}
+				else
+				{
+					var check = document.getElementById("WIND");
+					check.checked = false;
+				}
+			}
+			break;
+			case 6:
+			{
+				if (boolAttribs[i] == true)
+				{
+					var check = document.getElementById("EARTH");
+					check.checked = true;
+				}
+				else
+				{
+					var check = document.getElementById("EARTH");
+					check.checked = false;
+				}
+			}
+			break;
+			case 7:
+			{
+				if (boolAttribs[i] == true)
+				{
+					var check = document.getElementById("LIGHT");
+					check.checked = true;
+				}
+				else
+				{
+					var check = document.getElementById("LIGHT");
+					check.checked = false;
+				}
+			}
+			break;
+			case 8:
+			{
+				if (boolAttribs[i] == true)
+				{
+					var check = document.getElementById("DARK");
+					check.checked = true;
+				}
+				else
+				{
+					var check = document.getElementById("DARK");
+					check.checked = false;
+				}
+			}
+			break;
+		}
+	}
+}

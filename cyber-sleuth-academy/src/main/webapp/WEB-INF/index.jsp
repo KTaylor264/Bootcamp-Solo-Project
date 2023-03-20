@@ -8,7 +8,8 @@
 <link rel="stylesheet" href="/css/main.css"/>
 <title>Cyber Sleuth Academy</title>
 </head>
-<body>
+<body onload="checkStages(${boolStages}), checkTypes(${boolTypes}), checkAttribs(${boolAttribs}), checkGrowths(${boolGrowths})">
+	<script src="/js/main-script.js" defer></script>
 	<div class="container">
 		<div class="top-header">
 			<div>
@@ -28,25 +29,25 @@
 				<div class="div-box">
 					<label>Stage: </label>
 					<c:forEach var="stage" items="${stages}">
-						<label><input type="checkbox" name="${stage.stageName}"><c:out value="${stage.stageName}"/></label>
+						<label><input type="checkbox" name="${stage.stageName}" id="${stage.stageName}"><c:out value="${stage.stageName}"/></label>
 					</c:forEach>
 				</div>
 				<div class="div-box">
 					<label>Type: </label>
 					<c:forEach var="type" items="${types}">
-						<label><input type="checkbox" name="${type.typeName}"><c:out value="${type.typeName}"/></label>
+						<label><input type="checkbox" name="${type.typeName}" id="${type.typeName}"><c:out value="${type.typeName}"/></label>
 					</c:forEach>
 				</div>
 				<div class="div-box">
 					<label>Attribute: </label>
 					<c:forEach var="attribute" items="${attributes}">
-						<label><input type="checkbox" name="${attribute.attributeName}"><c:out value="${attribute.attributeName}"/></label>
+						<label><input type="checkbox" name="${attribute.attributeName}" id="${attribute.attributeName}"><c:out value="${attribute.attributeName}"/></label>
 					</c:forEach>
 				</div>
 				<div class="div-box">
 					<label>Growth Type: </label>
 					<c:forEach var="growthType" items="${growthTypes}">
-						<label><input type="checkbox" name="${growthType.growthTypeName}"><c:out value="${growthType.growthTypeName}"/></label>
+						<label><input type="checkbox" name="${growthType.growthTypeName}" id="${growthType.growthTypeName}"><c:out value="${growthType.growthTypeName}"/></label>
 					</c:forEach>
 				</div>
 				<input class="search-btn div-last" name="submit" type="submit" value="Search">

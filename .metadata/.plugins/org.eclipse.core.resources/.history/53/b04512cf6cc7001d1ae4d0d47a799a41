@@ -1,0 +1,18 @@
+function checkStages(boolStages, stages)
+{	
+	console.log(boolStages);
+
+	for (var i = 0; i < boolStages.length; i++)
+	{
+		if (boolStages[i] == true)
+		{
+			var check = document.getElementsByName(stages[i].stageName);
+			check.checked = true;
+		}
+		else
+		{
+			var check = document.getElementsByName(stages[i].stageName);
+			check.checked = false;
+		}
+	}
+}

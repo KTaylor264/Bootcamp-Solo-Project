@@ -1,0 +1,6 @@
+function checkStages(boolStages, stages)
+{	
+	console.log(boolStages);
+	console.log(stages);
+
+}

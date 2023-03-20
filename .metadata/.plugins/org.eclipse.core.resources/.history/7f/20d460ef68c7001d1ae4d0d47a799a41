@@ -1,0 +1,6 @@
+function checkStages(boolStages)
+{
+	console.log("I was called");
+	
+	console.log(boolStages);
+}

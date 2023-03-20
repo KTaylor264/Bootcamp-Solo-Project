@@ -1,0 +1,4 @@
+function checkStages(boolStage, index)
+{	
+	console.log(boolStage + " " + index);
+}

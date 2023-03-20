@@ -1,0 +1,28 @@
+function checkStages(boolStage, index)
+{	
+	console.log(boolStage);
+	
+	switch (index)
+	{
+		case 0:
+		{
+			if (boolStage == true)
+			{
+				var check = document.getElementsByName("Baby");
+				console.log(check);
+				check.checked = true;
+				console.log(check);
+				console.log("baby is checked");
+			}
+			else
+			{
+				var check = document.getElementsByName("Baby");
+				console.log(check);
+				check.checked = false;
+				console.log(check);
+				console.log("baby is not checked");
+			}
+		}
+		break;
+	}
+}

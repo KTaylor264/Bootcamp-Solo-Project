@@ -1,0 +1,70 @@
+function checkStages(boolStages)
+{
+	var boolStages = sessionStorage.getItem("boolStages");
+	
+	for (var i = 0; i < boolStages.length; i++)
+	{
+		if (boolStages[i] == true)
+		{
+			console.log("I am true");
+			switch (i)
+			{
+				case 0:
+				{
+					var check = document.getElementsByName("Baby");
+					check.checked = true;
+					console.log("baby is checked");
+				}
+				break;
+				case 1:
+				{
+					var check = document.getElementsByName("In-Training");
+					check.checked = true;
+				}
+				break;
+				case 2:
+				{
+					var check = document.getElementsByName("Rookie");
+					check.checked = true;
+				}
+				break;
+				case 3:
+				{
+					var check = document.getElementsByName("Champion");
+					check.checked = true;
+				}
+				break;
+				case 4:
+				{
+					var check = document.getElementsByName("Ultimate");
+					check.checked = true;
+				}
+				break;
+				case 5:
+				{
+					var check = document.getElementsByName("Mega");
+					check.checked = true;
+				}
+				break;
+				case 6:
+				{
+					var check = document.getElementsByName("Ultra");
+					check.checked = true;
+				}
+				break;
+				case 7:
+				{
+					var check = document.getElementsByName("Armor");
+					check.checked = true;
+				}
+				break;
+				case 8:
+				{
+					var check = document.getElementsByName("None");
+					check.checked = true;
+				}
+				break;
+			}
+		}
+	}
+}

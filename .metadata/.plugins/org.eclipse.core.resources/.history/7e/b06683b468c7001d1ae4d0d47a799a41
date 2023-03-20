@@ -1,0 +1,8 @@
+function checkStages()
+{
+	var boolStages = sessionStorage.getItem("boolStages");
+	
+	console.log("I was called");
+	
+	console.log(boolStages);
+}
